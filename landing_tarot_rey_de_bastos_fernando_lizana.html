@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rey de Bastos Tarot – Lecturas & Mentorías | Fernando Lizana</title>
+  <meta name="description" content="Lecturas de Tarot éticas y precisas en Chile. Amor, trabajo, propósito y camino espiritual. Mentorías premium y programas Signature. Reserva por WhatsApp." />
+  <meta property="og:title" content="Rey de Bastos Tarot – Fernando Lizana" />
+  <meta property="og:description" content="Lecturas de Tarot, numerología y Ley de Asunción con enfoque ético y práctico. Reserva hoy." />
+  <meta name="theme-color" content="#3b1b5b" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0614; --bg2:#140a28; --acc:#c8a858; --acc2:#9d7bff; --ink:#eae6ff; --mut:#bfb6d9; --chip:#2a1b4a; --card:#120a21; --glow:0 0 40px rgba(157,123,255,.3); --br:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:radial-gradient(1200px 800px at 15% -10%,#241445 0%,transparent 60%),radial-gradient(1200px 800px at 85% -10%,#1e0f3b 0%,transparent 60%),linear-gradient(180deg,var(--bg),var(--bg2));color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1120px,90vw);margin-inline:auto}
+    .grid{display:grid;gap:24px}
+    .btn{display:inline-flex;align-items:center;gap:.6rem;padding:14px 20px;border-radius:14px;background:linear-gradient(90deg,var(--acc),#e6d088);color:#1e1533;font-weight:800;box-shadow:0 8px 26px rgba(200,168,88,.25);transition:.2s transform,.2s box-shadow}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(200,168,88,.32)}
+    .btn.ghost{background:rgba(200,168,88,.08);color:var(--ink);border:1px solid rgba(200,168,88,.25);box-shadow:none}
+    header.hero{position:relative;isolation:isolate;padding:48px 0 96px;overflow:hidden}
+    .hero::before,.hero::after{content:"";position:absolute;inset:-20% -10%;background:radial-gradient(1200px 600px at 50% -10%,rgba(157,123,255,.17),transparent 60%);filter:blur(10px);z-index:-1}
+    nav.top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:36px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.5px}
+    .brand .logo{height:42px;width:42px;border-radius:12px;display:grid;place-items:center;background:conic-gradient(from 0deg at 50% 50%,#ffbf47,#ff8a47,#ff47b2,#8a47ff,#47b5ff,#47ffb6,#ffbf47);box-shadow:var(--glow);border:2px solid rgba(255,255,255,.12)}
+    .brand span{font-family:"Crimson Pro",serif;font-size:1.3rem}
+    .top a{padding:8px 14px;border-radius:10px;color:var(--mut)}
+    .top a:hover{background:rgba(255,255,255,.06);color:var(--ink)}
+
+    .hero .hgroup{display:grid;gap:16px}
+    .eyebrow{color:var(--acc);letter-spacing:.18em;font-weight:800;text-transform:uppercase}
+    h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.05;margin:0;font-family:"Crimson Pro",serif;font-weight:700}
+    .subtitle{color:var(--mut);max-width:60ch}
+    .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px}
+    .hero-card{margin-top:28px;display:grid;grid-template-columns:1.2fr .8fr;gap:28px}
+
+    .profile{background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:var(--br);padding:22px 22px 8px;backdrop-filter:blur(2px);box-shadow:0 18px 60px rgba(0,0,0,.35)}
+    .profile h3{font-family:"Crimson Pro",serif;margin:8px 0 6px}
+    .chips{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{background:var(--chip);border:1px solid rgba(255,255,255,.08);color:#cec7f0;padding:6px 10px;border-radius:999px;font-size:.85rem}
+
+    .emblem{background:linear-gradient(180deg,#1c1230,#100824);border:1px solid rgba(157,123,255,.35);border-radius:var(--br);display:grid;place-items:center;position:relative;overflow:hidden;box-shadow:0 18px 60px rgba(157,123,255,.15)}
+    .emblem svg{width:100%;height:auto;max-height:320px;opacity:.92}
+
+    section{padding:68px 0}
+    section.alt{background:linear-gradient(180deg,#0f0a1c,#0b0714)}
+    h2{font-family:"Crimson Pro",serif;font-size:clamp(1.6rem,3.6vw,2.3rem);margin:0 0 18px}
+    p.lead{color:#d7d1f0;max-width:70ch}
+
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:var(--br);padding:22px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    .card h3{margin:0 0 8px;font-family:"Crimson Pro",serif}
+    .card small{color:var(--mut)}
+
+    .price-group{margin-top:22px;border-top:1px dashed rgba(255,255,255,.12);padding-top:14px}
+    .price{display:flex;align-items:center;justify-content:space-between;margin:8px 0;padding:10px 12px;border-radius:12px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)}
+    .price span{display:block}
+    .price .title{font-weight:700}
+    .price .note{color:var(--mut);font-size:.92rem}
+    .price .amount{font-weight:800;color:#ffe7a3}
+
+    .table{width:100%;border-collapse:separate;border-spacing:0 10px;margin-top:8px}
+    .table tr{background:rgba(255,255,255,.03)}
+    .table th,.table td{padding:12px 14px;text-align:left}
+    .table th{color:#d7d1f0;font-weight:700}
+    .table td:last-child,.table th:last-child{text-align:right}
+    .table tr{border-radius:12px;overflow:hidden}
+
+    .ribbon{display:inline-flex;gap:.6rem;align-items:center;background:linear-gradient(90deg,rgba(157,123,255,.18),rgba(200,168,88,.18));border:1px solid rgba(255,255,255,.15);color:#e9e2ff;padding:10px 14px;border-radius:999px}
+
+    .testi{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:16px}
+    .quote{background:linear-gradient(180deg,#140c25,#0f091b);border:1px solid rgba(255,255,255,.08);border-radius:var(--br);padding:18px;font-style:italic;position:relative}
+    .quote::before{content:'\201C';position:absolute;top:-16px;left:12px;font-size:60px;color:rgba(200,168,88,.4)}
+
+    .faq details{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:12px 16px;margin:10px 0}
+    .faq summary{font-weight:700;cursor:pointer}
+
+    footer{padding:40px 0 60px;color:var(--mut);text-align:center;background:linear-gradient(180deg,#0b0614,#080510)}
+    .footnav{display:flex;gap:16px;justify-content:center;margin:10px 0 18px}
+
+    .floating-wa{position:fixed;right:18px;bottom:18px;z-index:99}
+    .floating-wa a{display:inline-grid;place-items:center;height:58px;width:58px;border-radius:999px;background:#25D366;color:#0b0614;font-weight:800;box-shadow:0 10px 24px rgba(37,211,102,.45)}
+
+    @media (max-width:900px){.hero-card{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <nav class="top">
+        <a class="brand" href="#top" aria-label="Rey de Bastos">
+          <span class="logo">🜂</span>
+          <span>Rey de Bastos Tarot</span>
+        </a>
+        <div class="toplinks">
+          <a href="#servicios">Servicios</a>
+          <a href="#precios">Precios</a>
+          <a href="#sobre-mi">Sobre mí</a>
+          <a href="#contacto" class="btn ghost">Reservar</a>
+        </div>
+      </nav>
+
+      <div class="hgroup">
+        <span class="eyebrow">Chile · Lecturas éticas & potentes</span>
+        <h1>Fernando Lizana — <em>El Rey de Bastos</em></h1>
+        <p class="subtitle">Tarot de Marsella y Rider, numerología práctica y Ley de Asunción — todo integrado en una lectura clara, honesta y accionable. Te digo lo que <strong>necesitas</strong> saber, no solo lo que quieres escuchar.</p>
+        <div class="cta">
+          <a class="btn" href="#precios">Ver precios</a>
+          <a class="btn ghost" href="#contacto">Agendar por WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="profile">
+          <span class="ribbon">✔ Código de Ética · ✦ 100% confidencial · ⚡ Enfoque práctico</span>
+          <h3>Mi promesa</h3>
+          <p>Lecturas con propósito: claridad para decidir, serenidad para actuar y rituales simples para mover la aguja. Sin humo. Sin fatalismos. Con herramientas reales.</p>
+          <div class="chips" aria-label="Especialidades">
+            <span class="chip">Amor & vínculos</span>
+            <span class="chip">Carrera & negocios</span>
+            <span class="chip">Camino espiritual</span>
+            <span class="chip">Diagnóstico de bloqueos</span>
+            <span class="chip">Tarot + Numerología</span>
+            <span class="chip">Ley de Asunción</span>
+          </div>
+        </div>
+        <div class="emblem" aria-hidden="true">
+          <!-- Simple tarot emblem SVG -->
+          <svg viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="g" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(300 160) rotate(90) scale(220 260)">
+                <stop stop-color="#c8a858" stop-opacity=".9"/>
+                <stop offset="1" stop-color="#c8a858" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <rect x="40" y="20" width="520" height="360" rx="24" stroke="#9d7bff" stroke-opacity=".45" fill="url(#g)"/>
+            <g stroke="#ffe7a3" stroke-opacity=".9" stroke-width="2">
+              <circle cx="300" cy="180" r="80" fill="rgba(255,231,163,.05)"/>
+              <path d="M300 85v40M300 235v40M215 180h40M345 180h40"/>
+              <path d="M300 110l16 24h-32l16-24zM300 250l-16-24h32l-16 24z"/>
+              <path d="M248 148l24 16-24 16 0-32zM352 148l-24 16 24 16 0-32z"/>
+            </g>
+            <text x="300" y="320" text-anchor="middle" fill="#e9e2ff" font-family="Crimson Pro,serif" font-size="22">Arcana • Claridad • Acción</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="sobre-mi" class="alt">
+    <div class="container grid" style="grid-template-columns:1.1fr .9fr;align-items:start">
+      <div>
+        <h2>Sobre mí</h2>
+        <p class="lead">Soy Fernando Lizana, tarotista chileno, desarrollador y eterno curioso. Integro <strong>Tarot de Marsella</strong>, <strong>numerología</strong> y <strong>Ley de Asunción</strong> en un método propio: <em>diagnosticar → decodificar → diseñar acciones</em>. Trabajo con ética clara, respeto absoluto y enfoque práctico.</p>
+        <div class="cards">
+          <div class="card"><h3>Enfoque</h3><p>Lecturas sin dramatismo: identificamos patrones, causas y opciones. Te llevas <strong>tareas simples</strong>, rituales breves y seguimiento si lo necesitas.</p></div>
+          <div class="card"><h3>Ética</h3><p>Sin promesas imposibles ni manipulaciones. Confidencialidad total, libre albedrío primero y lenguaje respetuoso. Si el Tarot dice «no es ahora», también lo digo.</p></div>
+          <div class="card"><h3>Herramientas</h3><p>Tarot, numerología básica, respiración consciente y micro‑hábitos. Para procesos largos: bitácora de manifestación y coaching breve.</p></div>
+        </div>
+      </div>
+      <div>
+        <h2 id="servicios">Servicios</h2>
+        <div class="cards">
+          <div class="card"><h3>Lecturas rápidas</h3><small>Accesibles</small>
+            <div class="price-group">
+              <div class="price"><span><span class="title">Carta del día / consejo express</span><span class="note">10 min – 1 carta</span></span><span class="amount">$7.000 CLP</span></div>
+              <div class="price"><span><span class="title">Mini tirada (3 cartas)</span><span class="note">15–20 min</span></span><span class="amount">$12.000 CLP</span></div>
+            </div>
+          </div>
+          <div class="card"><h3>Lecturas estándar</h3><small>Las más pedidas</small>
+            <div class="price-group">
+              <div class="price"><span><span class="title">Tirada general (6 cartas)</span><span class="note">30 min · visión completa</span></span><span class="amount">$20.000 CLP</span></div>
+              <div class="price"><span><span class="title">Tirada del amor / relaciones</span><span class="note">30–40 min · pareja, compatibilidad, futuro cercano</span></span><span class="amount">$22.000 CLP</span></div>
+              <div class="price"><span><span class="title">Tirada laboral / proyectos</span><span class="note">30–40 min · carrera, negocios, bloqueos</span></span><span class="amount">$22.000 CLP</span></div>
+            </div>
+          </div>
+          <div class="card"><h3>Lecturas avanzadas</h3><small>Profundización</small>
+            <div class="price-group">
+              <div class="price"><span><span class="title">Tirada anual (12 meses)</span><span class="note">45–60 min · mes a mes</span></span><span class="amount">$35.000 CLP</span></div>
+              <div class="price"><span><span class="title">Camino espiritual (arcanos mayores)</span><span class="note">60 min · propósito y bloqueos</span></span><span class="amount">$38.000 CLP</span></div>
+              <div class="price"><span><span class="title">Sesión completa de autoconocimiento</span><span class="note">60 min · tarot + numerología básica + consejo guiado</span></span><span class="amount">$40.000 CLP</span></div>
+            </div>
+          </div>
+          <div class="card"><h3>Experiencias premium</h3><small>Acompañamiento</small>
+            <div class="price-group">
+              <div class="price"><span><span class="title">Lectura + seguimiento (1 semana)</span><span class="note">45 min + 2 seguimientos por chat</span></span><span class="amount">$50.000 CLP</span></div>
+              <div class="price"><span><span class="title">Pack mensual (4 sesiones estándar de 30 min)</span><span class="note">Ahorro de $10.000</span></span><span class="amount">$70.000 CLP</span></div>
+              <div class="price"><span><span class="title">Sesión maestra</span><span class="note">90 min · Tarot + Ley de Asunción + plan de manifestación</span></span><span class="amount">$60.000 CLP</span></div>
+            </div>
+          </div>
+          <div class="card"><h3>Ultra Premium — Signature</h3><small>Rey de Bastos</small>
+            <div class="price-group">
+              <div class="price"><span><span class="title">Retiro 1 a 1 (online o presencial VIP)</span><span class="note">Medio día (4h) + plan 1 mes + seguimiento 30 días</span></span><span class="amount">$180.000 CLP</span></div>
+              <div class="price"><span><span class="title">Mentoría espiritual mensual</span><span class="note">4 sesiones de 90 min + acompañamiento directo</span></span><span class="amount">$250.000 CLP / mes</span></div>
+              <div class="price"><span><span class="title">Acompañamiento Maestro del Destino (90 días)</span><span class="note">13 sesiones + coaching continuo + ritual de cierre</span></span><span class="amount">$600.000 CLP</span></div>
+            </div>
+          </div>
+        </div>
+        <p style="margin-top:10px;color:var(--mut)">Modalidad online o presencial (Santiago). Medios de pago: transferencia, Mercado Pago. Valores en CLP.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="precios">
+    <div class="container">
+      <h2>Tabla de precios completa</h2>
+      <table class="table" aria-describedby="precios">
+        <thead><tr><th>Servicio</th><th>Detalle</th><th>Precio</th></tr></thead>
+        <tbody>
+          <tr><td> Carta del día / consejo express </td><td> 10 min – 1 carta </td><td>$7.000 CLP</td></tr>
+          <tr><td> Mini tirada (3 cartas) </td><td> 15–20 min </td><td>$12.000 CLP</td></tr>
+          <tr><td> Tirada general (6 cartas) </td><td> 30 min · visión completa </td><td>$20.000 CLP</td></tr>
+          <tr><td> Tirada del amor / relaciones </td><td> 30–40 min · pareja, compatibilidad, futuro cercano </td><td>$22.000 CLP</td></tr>
+          <tr><td> Tirada laboral / proyectos </td><td> 30–40 min · carrera, negocios, bloqueos </td><td>$22.000 CLP</td></tr>
+          <tr><td> Tirada anual (12 meses) </td><td> 45–60 min · mes a mes </td><td>$35.000 CLP</td></tr>
+          <tr><td> Camino espiritual (arcanos mayores) </td><td> 60 min · propósito y bloqueos </td><td>$38.000 CLP</td></tr>
+          <tr><td> Sesión completa de autoconocimiento </td><td> 60 min · tarot + numerología básica + consejo guiado </td><td>$40.000 CLP</td></tr>
+          <tr><td> Lectura + seguimiento (1 semana) </td><td> 45 min + 2 seguimientos por chat </td><td>$50.000 CLP</td></tr>
+          <tr><td> Pack mensual (4 sesiones estándar de 30 min) </td><td> Ahorro de $10.000 </td><td>$70.000 CLP</td></tr>
+          <tr><td> Sesión maestra </td><td> 90 min · Tarot + Ley de Asunción + plan de manifestación </td><td>$60.000 CLP</td></tr>
+          <tr><td> Retiro 1 a 1 (online o presencial VIP) </td><td> Medio día (4h) + plan 1 mes + seguimiento 30 días </td><td>$180.000 CLP</td></tr>
+          <tr><td> Mentoría espiritual mensual </td><td> 4 sesiones 90 min + acompañamiento directo </td><td>$250.000 CLP / mes</td></tr>
+          <tr><td> Acompañamiento Maestro del Destino (90 días) </td><td> 13 sesiones + coaching continuo + ritual de cierre </td><td>$600.000 CLP</td></tr>
+        </tbody>
+      </table>
+      <div class="cta" style="margin-top:16px">
+        <a class="btn" href="#contacto">Agendar ahora</a>
+        <a class="btn ghost" href="#faq">Preguntas frecuentes</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="container">
+      <h2>Testimonios</h2>
+      <div class="testi">
+        <div class="quote">“Directo y respetuoso. La tirada laboral me mostró un bloqueo que no había visto. Apliqué el plan de 7 días y literal se destrabó.” — <strong>C.</strong></div>
+        <div class="quote">“No te vende humo. Me dijo ‘no fuerces esto ahora’ y tenía razón. Me ahorró un drama y me dio paz.” — <strong>M.</strong></div>
+        <div class="quote">“La sesión maestra fue brutal en el buen sentido: tarot + ejercicios de imaginación guiada. Me ordenó la cabeza.” — <strong>F.</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <h2>FAQ – Preguntas frecuentes</h2>
+      <div class="faq">
+        <details><summary>¿Cómo reservamos?</summary><p>Escríbeme por WhatsApp con tu nombre, ciudad y el servicio que quieres. Te compartiré horarios y datos de pago. Online (Meet/Zoom) o presencial en Santiago.</p></details>
+        <details><summary>¿Grabación y seguimiento?</summary><p>Puedes grabar audio/video. Algunos servicios incluyen seguimiento por chat para dudas posteriores (ver tabla de precios).</p></details>
+        <details><summary>¿Qué no hago?</summary><p>No realizo trabajos mágicos para manipular personas ni “amarres”. Tampoco diagnósticos médicos. Trabajo con ética, respeto y libre albedrío.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="container grid" style="grid-template-columns:1fr 1fr;align-items:center">
+      <div>
+        <h2>Reserva tu lectura</h2>
+        <p class="lead">Agenda por WhatsApp. Si necesitas factura/boleta, indícalo al reservar. Horarios flexibles.</p>
+        <div class="cta">
+          <a class="btn" id="waLink" href="#">WhatsApp</a>
+          <a class="btn ghost" href="#top">Volver arriba</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>¿Qué envío por WhatsApp?</h3>
+        <ul>
+          <li>Tu <strong>nombre</strong> y ciudad.</li>
+          <li>El <strong>servicio</strong> que quieres.</li>
+          <li><strong>3 posibles horarios</strong>.</li>
+        </ul>
+        <p style="color:var(--mut)">Recibirás confirmación, método de pago y enlace de la reunión.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footnav">
+        <a href="#servicios">Servicios</a>
+        <a href="#precios">Precios</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div>© <span id="yy"></span> Rey de Bastos Tarot — Fernando Lizana · Chile</div>
+    </div>
+  </footer>
+
+  <div class="floating-wa"><a id="waFab" href="#" aria-label="Abrir WhatsApp">✆</a></div>
+
+  <script>
+    // >>> Personaliza con tu número (formato internacional sin +)
+    const PHONE = '56911111111'; // ejemplo: 56966253545
+    const hello = encodeURIComponent('Hola, quiero agendar una lectura. Mi nombre es ____ y estoy en ____. Me interesa ____');
+    const wa = `https://wa.me/${PHONE}?text=${hello}`;
+    document.getElementById('waLink').href = wa;
+    document.getElementById('waFab').href = wa;
+    document.getElementById('yy').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
