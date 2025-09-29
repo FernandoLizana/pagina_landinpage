@@ -18,36 +18,44 @@
     *{box-sizing:border-box}
     html,body{margin:0;background:radial-gradient(1200px 800px at 15% -10%,#241445 0%,transparent 60%),radial-gradient(1200px 800px at 85% -10%,#1e0f3b 0%,transparent 60%),linear-gradient(180deg,var(--bg),var(--bg2));color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif}
     a{color:inherit;text-decoration:none}
-    .container{width:min(1120px,90vw);margin-inline:auto}
+    .container{width:min(1120px,92vw);margin-inline:auto}
     .grid{display:grid;gap:24px}
     .btn{display:inline-flex;align-items:center;gap:.6rem;padding:14px 20px;border-radius:14px;background:linear-gradient(90deg,var(--acc),#e6d088);color:#1e1533;font-weight:800;box-shadow:0 8px 26px rgba(200,168,88,.25);transition:.2s transform,.2s box-shadow}
     .btn:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(200,168,88,.32)}
     .btn.ghost{background:rgba(200,168,88,.08);color:var(--ink);border:1px solid rgba(200,168,88,.25);box-shadow:none}
-    header.hero{position:relative;isolation:isolate;padding:48px 0 96px;overflow:hidden}
+    header.hero{position:relative;isolation:isolate;padding:40px 0 72px;overflow:hidden}
     .hero::before,.hero::after{content:"";position:absolute;inset:-20% -10%;background:radial-gradient(1200px 600px at 50% -10%,rgba(157,123,255,.17),transparent 60%);filter:blur(10px);z-index:-1}
-    nav.top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:36px}
+    nav.top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:28px}
     .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.5px}
     .brand .logo{height:42px;width:42px;border-radius:12px;display:grid;place-items:center;background:conic-gradient(from 0deg at 50% 50%,#ffbf47,#ff8a47,#ff47b2,#8a47ff,#47b5ff,#47ffb6,#ffbf47);box-shadow:var(--glow);border:2px solid rgba(255,255,255,.12)}
     .brand span{font-family:"Crimson Pro",serif;font-size:1.3rem}
     .top a{padding:8px 14px;border-radius:10px;color:var(--mut)}
     .top a:hover{background:rgba(255,255,255,.06);color:var(--ink)}
 
-    .hero .hgroup{display:grid;gap:16px}
+    .hero .hgroup{display:grid;gap:14px}
     .eyebrow{color:var(--acc);letter-spacing:.18em;font-weight:800;text-transform:uppercase}
-    h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.05;margin:0;font-family:"Crimson Pro",serif;font-weight:700}
+    h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.05;margin:0;font-family:"Crimson Pro",serif;font-weight:700}
     .subtitle{color:var(--mut);max-width:60ch}
-    .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px}
-    .hero-card{margin-top:28px;display:grid;grid-template-columns:1.2fr .8fr;gap:28px}
+    .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:6px}
 
-    .profile{background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:var(--br);padding:22px 22px 8px;backdrop-filter:blur(2px);box-shadow:0 18px 60px rgba(0,0,0,.35)}
-    .profile h3{font-family:"Crimson Pro",serif;margin:8px 0 6px}
+    /* ====== HERO CARD LAYOUT (responsive) ====== */
+    .hero-card{margin-top:24px;display:grid;grid-template-columns:1.05fr .95fr;gap:28px}
+    @media (max-width:1020px){.hero-card{grid-template-columns:1fr}}
+
+    /* Profile (text) */
+    .profile{background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:var(--br);padding:22px;backdrop-filter:blur(2px);box-shadow:0 18px 60px rgba(0,0,0,.35)}
+    .profile h3{font-family:"Crimson Pro",serif;margin:10px 0 6px}
     .chips{display:flex;flex-wrap:wrap;gap:8px}
     .chip{background:var(--chip);border:1px solid rgba(255,255,255,.08);color:#cec7f0;padding:6px 10px;border-radius:999px;font-size:.85rem}
 
-    .emblem{background:linear-gradient(180deg,#1c1230,#100824);border:1px solid rgba(157,123,255,.35);border-radius:var(--br);display:grid;place-items:center;position:relative;overflow:hidden;box-shadow:0 18px 60px rgba(157,123,255,.15)}
-    .emblem svg{width:100%;height:auto;max-height:320px;opacity:.92}
+    /* Portrait (image) */
+    .portrait{position:relative;border-radius:22px;overflow:hidden;background:linear-gradient(180deg,#1c1230,#0f091b);border:1px solid rgba(157,123,255,.35);box-shadow:0 18px 60px rgba(157,123,255,.18)}
+    .portrait img{width:100%;height:100%;display:block;object-fit:cover;aspect-ratio:4/5;max-height:560px}
+    .portrait::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 40% at 50% 0%,rgba(200,168,88,.18),transparent 60%)}
+    @media (max-width:1020px){.portrait img{aspect-ratio:16/10;max-height:none}}
 
-    section{padding:68px 0}
+    /* Sections */
+    section{padding:64px 0}
     section.alt{background:linear-gradient(180deg,#0f0a1c,#0b0714)}
     h2{font-family:"Crimson Pro",serif;font-size:clamp(1.6rem,3.6vw,2.3rem);margin:0 0 18px}
     p.lead{color:#d7d1f0;max-width:70ch}
@@ -59,17 +67,14 @@
 
     .price-group{margin-top:22px;border-top:1px dashed rgba(255,255,255,.12);padding-top:14px}
     .price{display:flex;align-items:center;justify-content:space-between;margin:8px 0;padding:10px 12px;border-radius:12px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)}
-    .price span{display:block}
     .price .title{font-weight:700}
     .price .note{color:var(--mut);font-size:.92rem}
     .price .amount{font-weight:800;color:#ffe7a3}
 
     .table{width:100%;border-collapse:separate;border-spacing:0 10px;margin-top:8px}
-    .table tr{background:rgba(255,255,255,.03)}
     .table th,.table td{padding:12px 14px;text-align:left}
     .table th{color:#d7d1f0;font-weight:700}
     .table td:last-child,.table th:last-child{text-align:right}
-    .table tr{border-radius:12px;overflow:hidden}
 
     .ribbon{display:inline-flex;gap:.6rem;align-items:center;background:linear-gradient(90deg,rgba(157,123,255,.18),rgba(200,168,88,.18));border:1px solid rgba(255,255,255,.15);color:#e9e2ff;padding:10px 14px;border-radius:999px}
 
@@ -80,13 +85,11 @@
     .faq details{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:12px 16px;margin:10px 0}
     .faq summary{font-weight:700;cursor:pointer}
 
-    footer{padding:40px 0 60px;color:var(--mut);text-align:center;background:linear-gradient(180deg,#0b0614,#080510)}
+    footer{padding:36px 0 56px;color:var(--mut);text-align:center;background:linear-gradient(180deg,#0b0614,#080510)}
     .footnav{display:flex;gap:16px;justify-content:center;margin:10px 0 18px}
 
     .floating-wa{position:fixed;right:18px;bottom:18px;z-index:99}
     .floating-wa a{display:inline-grid;place-items:center;height:58px;width:58px;border-radius:999px;background:#25D366;color:#0b0614;font-weight:800;box-shadow:0 10px 24px rgba(37,211,102,.45)}
-
-    @media (max-width:900px){.hero-card{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -97,14 +100,9 @@
           <span class="logo">🜂</span>
           <span>Rey de Bastos Tarot</span>
         </a>
-        <img src="foto.jpg" 
-     alt="Foto de Fernando Lizana - Rey de Bastos" 
-     style="max-width:100%;border-radius:18px;box-shadow:0 12px 40px rgba(0,0,0,.4);margin-bottom:18px;">
-
         <div class="toplinks">
           <a href="#servicios">Servicios</a>
           <a href="#precios">Precios</a>
-
           <a href="#sobre-mi">Sobre mí</a>
           <a href="#contacto" class="btn ghost">Reservar</a>
         </div>
@@ -121,12 +119,12 @@
       </div>
 
       <div class="hero-card">
+        <!-- Retrato a la derecha en desktop, arriba en mobile -->
+        <figure class="portrait">
+          <img src="foto.jpeg" alt="Foto de Fernando Lizana - Rey de Bastos" loading="lazy" />
+        </figure>
+
         <div class="profile">
-          <img src="foto.jpeg" 
-     alt="Foto de Fernando Lizana - Rey de Bastos" 
-     style="max-width:100%;border-radius:18px;box-shadow:0 12px 40px rgba(0,0,0,.4);margin-bottom:18px;">
-
-
           <span class="ribbon">✔ Código de Ética · ✦ 100% confidencial · ⚡ Enfoque práctico</span>
           <h3>Mi promesa</h3>
           <p>Lecturas con propósito: claridad para decidir, serenidad para actuar y rituales simples para mover la aguja. Sin humo. Sin fatalismos. Con herramientas reales.</p>
@@ -138,25 +136,6 @@
             <span class="chip">Tarot + Numerología</span>
             <span class="chip">Ley de Asunción</span>
           </div>
-        </div>
-        <div class="emblem" aria-hidden="true">
-          <!-- Simple tarot emblem SVG -->
-          <svg viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <radialGradient id="g" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(300 160) rotate(90) scale(220 260)">
-                <stop stop-color="#c8a858" stop-opacity=".9"/>
-                <stop offset="1" stop-color="#c8a858" stop-opacity="0"/>
-              </radialGradient>
-            </defs>
-            <rect x="40" y="20" width="520" height="360" rx="24" stroke="#9d7bff" stroke-opacity=".45" fill="url(#g)"/>
-            <g stroke="#ffe7a3" stroke-opacity=".9" stroke-width="2">
-              <circle cx="300" cy="180" r="80" fill="rgba(255,231,163,.05)"/>
-              <path d="M300 85v40M300 235v40M215 180h40M345 180h40"/>
-              <path d="M300 110l16 24h-32l16-24zM300 250l-16-24h32l-16 24z"/>
-              <path d="M248 148l24 16-24 16 0-32zM352 148l-24 16 24 16 0-32z"/>
-            </g>
-            <text x="300" y="320" text-anchor="middle" fill="#e9e2ff" font-family="Crimson Pro,serif" font-size="22">Arcana • Claridad • Acción</text>
-          </svg>
         </div>
       </div>
     </div>
@@ -304,8 +283,7 @@
   <div class="floating-wa"><a id="waFab" href="#" aria-label="Abrir WhatsApp">✆</a></div>
 
   <script>
-    // >>> Personaliza con tu número (formato internacional sin +)
-    const PHONE = '56966253545'; // ejemplo: 56966253545
+    const PHONE = '56966253545';
     const hello = encodeURIComponent('Hola, quiero agendar una lectura. Mi nombre es ____ y estoy en ____. Me interesa ____');
     const wa = `https://wa.me/${PHONE}?text=${hello}`;
     document.getElementById('waLink').href = wa;
